@@ -1,0 +1,3 @@
+body{background-color:black; font-size: 150%}
+#resume{padding-left:20%; padding-right:20%; font-style:italic; font-family:Consolas; color: white}
+#resume img{float:right; background-color:#253177; padding:50px; border-radius:50% 0 50% 50%}
