@@ -1,9 +1,15 @@
-body{background-image:url("../img/background.jpg"); background-size:100%; font-size: 150%;}
-#resume{background-color: rgba(0, 0, 0, 0.8); margin-left:10%; margin-right:10%; font-style:italic; font-family:Consolas; color: white; padding-bottom:50%; padding-top: 10px;}
+body{background-image:url("../img/background.jpg"); background-size:100%; font-size: 150%; background-repeat:repeat-y}
+#resume{background-color: rgba(0, 0, 0, 0.9); margin-left:10%; margin-right:10%; font-style:italic; font-family:Consolas; color: white; padding-top: 10px;}
 #resume{padding-left:5%; padding-right:5%;}
-#resume img{float:right; background-color:#253177; margin:5%; padding:2%; border-radius:50% 0 50% 0;}
+#resume img{float:right; background-color:#253177; margin:1%; padding:2%; border-radius:50% 0 50% 0; max-width: 100%; max-height: 100%;}
+#resume a{float:right; background-color:#253177; margin:1%; padding:3%; border-radius: 50% 0 50% 0; color:white; width:600px; height: 200px; justify-content: center; align-items:center}
+#resume a img{width:100%; border-radius:0 0 0 0; background-color:transparent; margin: auto; padding: auto}
+#resume table{height: auto; width: 100%; border-collapse:separate}
+#resume td:nth-child(2){width:25%; text-align:right;}
 
-@media(max-width: 600px){
-    body{font-size: 14px; background-size:350%}
-    #resume img{width: 75%; height: 75%;}
+@media(max-width: 900px){
+    body{font-size: 14px; background-size:200%}
+    #resume img{width: 75%; height: 75%; align-items:center;}
+    #resume a{float:inline-start; align-items:center; text-align:center; width:80%}
+    #resume a img{width:80%}
 }
