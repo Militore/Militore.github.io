@@ -1,13 +1,15 @@
 body{background-image:url("../img/background.jpg"); background-size:100%; font-size: 150%; background-repeat:repeat-y}
 html{background-color: rgba(0, 0, 0, 1); }
 #resume{background-color: rgba(0, 0, 0, 1); margin-left:5%; margin-right:5%; font-style:italic; font-family:Verdana, Geneva, Tahoma, sans-serif; color: white; padding-top: 10px; padding-left:5%; padding-right:5%;}
-#resume #contact{display:inline-block}
-#resume #contact a img{width:64px; height:64px}
 #resume img{float:center; border-bottom: 5px solid #253177; margin:1%; padding:2%; border-radius:25%; max-width: 80%; max-height: 80%;}
-#resume a{width:40vw; height: 20vw; max-width: 300px; max-height: 150px; margin: 1%; margin-top: 10px; color: white; text-decoration: none;}
+#resume a{width:40vw; height: 20vw; max-width: 300px; max-height: 150px; margin: 1%; margin-top: 10px; color: white; text-decoration: none; transition: all 0.3s ease;}
+#resume a:hover img{opacity: 0.7;}
 #resume a img{border-bottom:5px solid #253177; background-color:transparent; width: auto; height: auto; object-fit: cover;}
 #resume table{height: auto; width: 100%; border-collapse:separate;}
 #resume td{border: 1px solid #000}
+#resume #contact{display:inline-block}
+#resume #contact a img{width:64px; height:64px}
+
 #resume td:first-child{padding-right: 10%;}
 #resume td:nth-child(2){width:25%; text-align:center; border-left: 2px solid #fff}
 
