@@ -17,6 +17,8 @@ main td:nth-child(2){width:30%; text-align:center; border-left: 2px solid #fff; 
 #contact{display:inline-block; padding: 0 1% 1%}
 #contact a img{width:64px; height:64px}
 
+#project{background-color: rgba(40, 40, 40, 0.75); padding:3%; margin:3%; border-radius: 15%; width:auto; }
+
 /*For JS*/
 .gallery {display: block;text-align:center}
 .gallery img{max-width: 100%; max-height:480px;margin-bottom: 20px; border:#fff 3px solid; border-radius: 25%}
