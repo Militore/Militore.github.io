@@ -19,7 +19,7 @@ main td:nth-child(2){width:30%; text-align:center; border-left: 2px solid #000; 
 #contact{display:inline-block; padding: 0 1% 1%}
 #contact a img{width:64px; height:64px}
 
-#project{background-color: rgba(40, 40, 40, 0.75); padding:3%; margin:3%; border-radius: 15% 0 15% 0; width:auto; }
+#project{background-color: #B6B09F; padding:3%; margin:3%; border-radius: 15% 0 15% 0; width:auto; }
 
 /*For JS*/
 .gallery {display: block;text-align:center}
