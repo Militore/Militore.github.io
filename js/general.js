@@ -1,4 +1,4 @@
-//Ability to maximize every image
+// Ability to maximize every image without jquery
 const images = document.querySelectorAll('img');
 
 images.forEach((image) => {
@@ -18,4 +18,19 @@ images.forEach((image) => {
       });
     });
   }
+});
+
+// Hide and show navbar with jquery
+let hideClicked = false;
+
+$("#nav-hide").click(function(){
+  if(!hideClicked) {
+    $("#nav-hide").text('v');
+    hideClicked=true;
+  }
+  else {
+    $("#nav-hide").text('^');
+    hideClicked=false;
+  }
+  $("nav").slideToggle(400);
 });
