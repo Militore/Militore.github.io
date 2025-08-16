@@ -5,7 +5,7 @@ a:hover{opacity: 0.7;}
 a img{ width: auto; height: auto; object-fit: cover;}
 p{margin:0; padding:1%}
 header{text-align:center; font-size: 150%; background-color: #222831; padding: 0px; border-bottom: 10px solid #393E46;}
-header h1{margin-top: 0px}
+header h1{margin-top: 0; margin-bottom: 1%}
 nav{font-size: 80%; font-style: normal}
 footer{max-width: 100%; width: auto; min-height:25px; background: #222831; padding: 0 5% 0 5%; border-top: 10px solid #393E46;}
 .middle{text-align:center;}
