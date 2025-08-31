@@ -3,24 +3,28 @@
     --head-color: #222831;
     --head-sec-color: #393E46;
     --main-sec-color: #948979;
-    --main-color: #DFD0B8;    
+    --main-color: #DFD0B8;
+    --head-text: #FFF;
+    --main-text: #000;
 }
 
 /*Main CSS*/
 
-html{font-family:Verdana, Geneva, Tahoma, sans-serif; color: #F2F2F2;}
+html{font-family:Verdana, Geneva, Tahoma, sans-serif; color: var(--head-text)}
 body{background-color: var(--head-color); background-size:100%; font-size: 150%; background-repeat:round; margin:0; padding: 0;}
-a{width:40vw; max-width: 300px; max-height: 150px; margin: 1%; margin-top: 10px; text-decoration: none; transition: all 0.3s ease; border-radius:25%; cursor:pointer; color: #F2F2F2;}
+a{width:40vw; max-width: 300px; max-height: 150px; margin: 1%; margin-top: 10px; text-decoration: none; transition: all 0.3s ease; cursor:pointer;}
 a:hover{opacity: 0.7;}
 a img{ width: auto; height: auto; object-fit: cover;}
 p{margin:0; padding:1%}
 header{text-align:center; font-size: 150%; background-color: var(--head-color); padding: 0px; border-bottom: 10px solid var(--head-sec-color);}
-header h1{margin-top: 0; margin-bottom: 1%}
-nav{font-size: 80%; font-style: normal}
-footer{max-width: 100%; width: auto; min-height:25px; background: var(--head-color); padding: 0 5% 0 5%; border-top: 10px solid var(--head-sec-color);}
+header a{color: var(--head-text);}
+header h1{margin-top: 0; margin-bottom: 1%; color: var(--head-text);}
+nav{font-size: 80%; font-style: normal;}
+footer{display: grid; grid-template-columns: 1fr 1fr; max-width: 100%; width: auto; min-height:25px; background: var(--head-color); padding: 0 5% 0 5%; border-top: 10px solid var(--head-sec-color); color: var(--head-text);}
+footer > div:nth-child(2){text-align:right;}
 .middle{text-align:center;}
 
-main{padding:10px 5% 10px 5%; color: #000000; background-color: var(--main-color);}
+main{padding:10px 5% 10px 5%; color: var(--main-text); background-color: var(--main-color);}
 main img{float:center; margin:1%; padding:2%; max-width: 80%; max-height: 80%;}
 main table{height: auto; width: 100%; border-collapse:separate;}
 main td:first-child{padding-right: 5%;}
