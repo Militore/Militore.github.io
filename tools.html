@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" sizes="196x196" href="img/favicon.png">
+	<title>Личный сайт</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Личный сайт</h1>
+    <nav>
+        <div id="nav-navbar" class="middle">
+            <a href="index.html">Главная</a>
+            <a href="practice.html">Проекты</a>
+            <a href="tools.html">Инструменты</a>
+        </div>
+    </nav>
+    <a id="nav-hide">^</a>
+</header>
+<main>
+<div class="horizontal-select middle">
+    <ul>
+        <li style="display:none"><button id="calculator">Калькулятор</button></li>
+        <li><button id="password">Пароль</button></li>
+    </ul>
+</div>
+<template id="calculator" class="middle">
+    <input id="calculator-text" type="text">
+    <button id="calculator-start"></button>
+</template>
+<template id="password" class="middle">
+    <label for="password-text">Пароль</label>
+    <input id="password-text" type="text" readonly>
+    <label for="password-length-text">Длина пароля</label>
+    <label for="password-length">16</label>
+    <input id="password-length" type="range" min="1" max="40" value="16">
+    <button id="password-start" type="submit">Сгенерировать пароль</button>
+</template>
+<noscript class="middle">
+    <b>Выключен Javascript. Функции не будут работать.</b>
+    <a href="https://yandex.ru/support/common/ru/browsers-settings/browsers-java-js-settings">Инструкция как включить Javascript</a>
+</noscript>
+</main>
+<footer>
+    <div id="left-footer">
+    <p>Решаю ваши проблемы, связывайтесь для сотрудничества</p>
+    <div id="contact">
+        <noscript><p>Javascript выключен, данные спрятаны для защиты от спам-ботов</p></noscript>
+        <js-exe class="cont-tg"><script src="js/nojs-hide.js"></script></js-exe>
+    </div>
+    </div>
+    <div id="right-footer">
+        <p>Поменять тему сайта</p>
+        <input type="range" id="change-theme" min="1" max="3" value="1">
+    </div>
+</footer>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/general.js"></script>
+<script src="js/tools.js"></script>
+</div>
+</body>
+</html>
