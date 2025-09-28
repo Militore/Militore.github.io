@@ -30,13 +30,32 @@
     <input id="calculator-text" type="text">
     <button id="calculator-start"></button>
 </template>
-<template id="password" class="middle">
-    <label for="password-text">Пароль</label>
-    <input id="password-text" type="text" readonly>
-    <label for="password-length-text">Длина пароля</label>
-    <label for="password-length">16</label>
-    <input id="password-length" type="range" min="1" max="40" value="16">
-    <button id="password-start" type="submit">Сгенерировать пароль</button>
+<template id="password">
+    <div id="password-form">
+        <label for="password-text">Пароль</label>
+        <input id="password-text" type="text" readonly>
+        <label for="password-length-text">Длина пароля</label>
+        <label for="password-length">16</label>
+        <input id="password-length" type="range" min="1" max="40" value="16">
+        <button id="password-start" type="submit" class="middle">Сгенерировать пароль</button>
+    </div>
+    <div id="warning">
+        <span style="color:red">
+            <p><b>Внимание:</b> Этот способ генерации пароля может быть небезопасным по причинам:</p>
+            <ul>
+                <li>Отображение в открытом виде без хэширования.</li>
+                <li>Пропадает после обновления страницы или генерации нового пароля - <b>СОХРАНИТЕ ЕГО В НАДЕЖНОМ МЕСТЕ!</b></li>
+                <li>Пароль состоящий из менее 8 символов легко подобрать.</li>
+            </ul>
+        </span>
+        <span style="color:green">
+            <p>Почему такой способ генерации пароля может считаться безопасным:</p>
+            <ul>
+                <li>Генерация на вашей стороне (клиента) - он не сохраняется на сервере или в базе данных.</li>
+                <li>Более 12 символов очень сложно подобрать.</li>
+            </ul>
+        </span>
+    </div>
 </template>
 <noscript class="middle">
     <b>Выключен Javascript. Функции не будут работать.</b>
