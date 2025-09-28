@@ -64,12 +64,12 @@ input{
 }
 .tools{
     display:flex;
-    *{display:block; margin:auto;}
     #password-form{
         display: block;
         margin: auto;
         text-align:center;
         width:105%;
+        *{display:block; margin:auto;}
     }
 }
 
