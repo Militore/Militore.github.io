@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" sizes="196x196" href="/img/favicon.png">
+	<title>Личный сайт</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/js.css">
+</head>
+<body>
+<header>
+    <h1>Личный сайт</h1>
+    <nav>
+        <div id="nav-navbar" class="middle">
+            <a href="/">Инструменты</a>
+        </div>
+    </nav>
+    <a id="nav-hide">^</a>
+</header>
+<main>
+<div id="horizontal-select" class="middle">
+    <ul>
+        <li><button id="password">Пароль</button></li>
+        <li><button id="encryptor">AES Шифрование</button></li>
+    </ul>
+</div>
+<template id="password">
+    <div id="password">
+        <h2>Генератор пароля</h2>
+        <div class="flex two-row">
+            <div id="password-form">
+                <label for="password-text">Пароль</label>
+                <input id="password-text" type="text" readonly>
+                <label for="password-length-text">Длина пароля</label>
+                <label for="password-length">16</label>
+                <input id="password-length" type="range" min="1" max="40" value="16">
+                <button id="password-start" type="submit" class="middle">Сгенерировать пароль</button>
+                <button id="password-copy">Скопировать</button>
+            </div>
+            <div id="warning">
+                <span style="color:red">
+                    <p><b>Внимание:</b> Этот способ генерации пароля может быть небезопасным по причинам:</p>
+                    <ul>
+                        <li>Отображение в открытом виде без хэширования.</li>
+                        <li>Пропадает после обновления страницы или генерации нового пароля - <b>СОХРАНИТЕ ЕГО В НАДЕЖНОМ МЕСТЕ!</b></li>
+                        <li>Пароль состоящий из менее 8 символов легко подобрать.</li>
+                    </ul>
+                </span>
+                <span style="color:green">
+                    <p>Почему такой способ генерации пароля может считаться безопасным:</p>
+                    <ul>
+                        <li>Генерация на вашей стороне (клиента) - он не сохраняется на сервере или в базе данных.</li>
+                        <li>Более 12 символов очень сложно подобрать.</li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="encryptor">
+    <div id="encryptor">
+        <h2>Шифровка сообщений</h2>
+        <div class="flex two-row">
+            <div class="encryptor-tab-content border-right" data-tab="encrypt">
+                <h3 style="color:red">Шифровка</h3>
+                <div class="encryptor-info-box">
+                    <strong>Как использовать:</strong> Введи свое сообщение и пароль. Отправь зашифрованное сообщение. Собеседник должен знать пароль. Затем нажми расшифровать.
+                </div>
+                
+                <div class="encryptor-form-group">
+                    <textarea class="encryptor-plaintext" placeholder="Сообщение для шифровки..."></textarea>
+                </div>
+                
+                <div class="encryptor-form-group">
+                    <input type="password" class="encryptor-encrypt-password" placeholder="Пароль...">
+                </div>
+                
+                <div class="encryptor-button-group">
+                    <button class="encryptor-btn-primary encryptor-encrypt-btn">Зашифровать</button>
+                </div>
+                
+                <div class="encryptor-output-box">
+                    <div class="encryptor-output-label">Зашифрованное сообщение:</div>
+                    <div class="encryptor-output-text encryptor-encrypted-text"></div>
+                    <button class="encryptor-copy-btn encryptor-copy-encrypted-btn">Скопировать</button>
+                </div>
+            </div>
+            
+            <div class="encryptor-tab-content" data-tab="decrypt">
+                <h3 style="color:green">Расшифровка</h3>
+                <div class="encryptor-info-box">
+                    <strong>Как использовать:</strong> Введи сообщение и пароль и затем нажми расшифровать.
+                </div>
+                
+                <div class="encryptor-form-group">
+                    <textarea class="encryptor-ciphertext" placeholder="Зашифрованное сообщение..."></textarea>
+                </div>
+                
+                <div class="encryptor-form-group">
+                    <input type="password" class="encryptor-decrypt-password" placeholder="Пароль...">
+                </div>
+                
+                <div class="encryptor-button-group">
+                    <button class="encryptor-btn-primary encryptor-decrypt-btn">Расшифровать</button>
+                </div>
+                
+                <div class="encryptor-output-box">
+                    <div class="encryptor-output-label">Расшифрованное сообщение:</div>
+                    <div class="encryptor-output-text encryptor-decrypted-text"></div>
+                    <button class="encryptor-copy-btn encryptor-copy-decrypted-btn">Скопировать</button>
+                </div>
+            </div>
+        </div>
+        <p>Для шифрования используется библиотека https://cdnjs.com/libraries/crypto-js</p>
+    </div>
+</template>
+<noscript class="middle">
+    <b>Выключен Javascript. Функции не будут работать.</b>
+    <a href="https://yandex.ru/support/common/ru/browsers-settings/browsers-java-js-settings">Инструкция как включить Javascript</a>
+</noscript>
+</main>
+<footer>
+    <div id="left-footer">
+    <p>Решаю ваши проблемы, связывайтесь для сотрудничества</p>
+    <div id="contact">
+        <noscript><p>Javascript выключен, данные спрятаны для защиты от спам-ботов</p></noscript>
+        <js-exe class="cont-tg"><script src="/js/nojs-hide.js"></script></js-exe>
+    </div>
+    </div>
+    <div id="right-footer">
+        <p>Поменять тему сайта</p>
+        <input type="range" id="change-theme" min="1" max="3" value="1">
+    </div>
+</footer>
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="/js/general.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/tools.js"></script>
+</div>
+</body>
+</html>
