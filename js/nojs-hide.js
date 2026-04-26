@@ -5,7 +5,7 @@ var parentElement = scriptTag.parentNode; // get the parent element of the scrip
 var classes = parentElement.className.split(' ');
 switch (true) {
     case classes.includes("cont-tg"):
-        var middle = 'https://t.me/Militore"><img class="no-expand" src="img/t_logo_2x.png">';
+        var middle = 'https://t.me/Militore"><img class="no-expand" src="/img/t_logo_2x.png">';
         break;
 }
 text = sa+middle+ea
