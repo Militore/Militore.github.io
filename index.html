@@ -5,20 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" sizes="196x196" href="/img/favicon.png">
 	<title>Militore Tools</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/js.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/js.css">
 </head>
 <body>
-<header>
-    <h1>Personal site</h1>
-    <nav>
-        <div id="nav-navbar" class="middle">
-            <a href="/">EN</a>
-            <a href="/ru/">RU</a>
-        </div>
-    </nav>
-    <a id="nav-hide">^</a>
-</header>
 <main>
 <div id="horizontal-select" class="middle">
     <ul>
@@ -31,13 +21,15 @@
         <h2>Password Generator</h2>
         <div class="flex two-row">
             <div id="password-form">
-                <label for="password-text">Password</label>
-                <input id="password-text" type="text" readonly>
+                <label class="h3-like" for="password-text">Password</label>
+                <input id="password-text" type="text" style="text-align: center;" readonly>
                 <label for="password-length-text">Password Length</label>
                 <label for="password-length">16</label>
                 <input id="password-length" type="range" min="1" max="40" value="16">
-                <button id="password-start" type="submit" class="middle">Generate password</button>
-                <button id="password-copy">Copy</button>
+                <div class="flex two-row">
+                    <button id="password-start" type="submit" class="middle">Generate password</button>
+                    <button id="password-copy">Copy</button>
+                </div>
             </div>
             <div id="warning">
                 <span style="color:red">
@@ -63,53 +55,61 @@
     <div id="encryptor">
         <h2>AES Encryptor</h2>
         <div class="flex two-row">
-            <div class="encryptor-tab-content border-right" data-tab="encrypt">
-                <h3 style="color:red">Encrypt</h3>
-                <div class="encryptor-info-box">
-                    <strong>How to use:</strong> Enter your message and password. Send an encrypted message. The receiver must know the password. Then click decrypt.
-                </div>
+            <div class="encryptor-tab-content" data-tab="encrypt">
+                <details>
+                    <summary>
+                        <span class="h3-like" style="color:red">Encrypt</span>
+                    </summary>
+                    <div class="encryptor-info-box">
+                        <strong>How to use:</strong> Enter your message and password. Send an encrypted message. The receiver must know the password. Then click decrypt.
+                    </div>
+                </details>
                 
-                <div class="encryptor-form-group">
+                <div class="encryptor-form-group flex">
                     <textarea class="encryptor-plaintext" placeholder="Message to encrypt..."></textarea>
                 </div>
                 
-                <div class="encryptor-form-group">
+                <div class="encryptor-form-group flex">
                     <input type="password" class="encryptor-encrypt-password" placeholder="Password...">
                 </div>
                 
-                <div class="encryptor-button-group">
+                <div class="encryptor-button-group flex two-row">
                     <button class="encryptor-btn-primary encryptor-encrypt-btn">Encrypt</button>
+                    <button class="encryptor-copy-btn encryptor-copy-encrypted-btn">Copy</button>
                 </div>
                 
-                <div class="encryptor-output-box">
+                <div class="encryptor-output-box flex two-row">
                     <div class="encryptor-output-label">Encrypted message:</div>
                     <div class="encryptor-output-text encryptor-encrypted-text"></div>
-                    <button class="encryptor-copy-btn encryptor-copy-encrypted-btn">Copy</button>
                 </div>
             </div>
             
             <div class="encryptor-tab-content" data-tab="decrypt">
-                <h3 style="color:green">Decrypt</h3>
-                <div class="encryptor-info-box">
-                    <strong>How to use:</strong> Enter the message and password, click decrypt.
-                </div>
+                <details>
+                    <summary>
+                        <span class="h3-like" style="color:green">Decrypt</span>
+                    </summary>
+                    <div class="encryptor-info-box">
+                        <strong>How to use:</strong> Enter the message and password, click decrypt.
+                    </div>
+                </details>
                 
-                <div class="encryptor-form-group">
+                <div class="encryptor-form-group flex">
                     <textarea class="encryptor-ciphertext" placeholder="Encrypted message..."></textarea>
                 </div>
                 
-                <div class="encryptor-form-group">
+                <div class="encryptor-form-group flex">
                     <input type="password" class="encryptor-decrypt-password" placeholder="Password...">
                 </div>
                 
-                <div class="encryptor-button-group">
+                <div class="encryptor-button-group flex two-row">
                     <button class="encryptor-btn-primary encryptor-decrypt-btn">Decrypt</button>
+                    <button class="encryptor-copy-btn encryptor-copy-decrypted-btn">Copy</button>
                 </div>
                 
                 <div class="encryptor-output-box">
                     <div class="encryptor-output-label">Decrypted message:</div>
                     <div class="encryptor-output-text encryptor-decrypted-text"></div>
-                    <button class="encryptor-copy-btn encryptor-copy-decrypted-btn">Copy</button>
                 </div>
             </div>
         </div>
@@ -134,10 +134,10 @@
         <input type="range" id="change-theme" min="1" max="3" value="1">
     </div>
 </footer>
-<script src="/js/jquery-3.7.1.min.js"></script>
-<script src="/js/general.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/general.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="/js/tools.js"></script>
+<script src="js/tools.js"></script>
 </div>
 </body>
 </html>

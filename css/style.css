@@ -81,15 +81,17 @@ nav {
 }
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100%;
-    width: auto;
-    min-height: 25px;
+    display: flex;
+    gap: 2%;
+    flex-direction: row;
     background: var(--head-color);
     padding: 0 5% 0 5%;
     border-top: 10px solid var(--head-sec-color);
     color: var(--head-text);
+}
+
+footer > *{
+    flex: 1;
 }
 
 footer>div:nth-child(2) {
@@ -142,6 +144,10 @@ main td:nth-child(2) {
     display: flex;
 }
 
+.two-row{
+    gap: 2%;
+}
+
 .two-row>* {
     width: 50%;
     display: flex;
@@ -186,14 +192,22 @@ textarea {
     font-size: 120%;
 }
 
-textarea {
-    width: 95%;
+summary::marker{
+    float: left;
 }
 
+textarea,
 input {
-    width: fit-content;
-    min-width: 4ch;
-    box-sizing: content-box;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.h3-like {
+    font-size: 36px;
+    font-weight: bold;
 }
 
 /* Tools*/
@@ -209,14 +223,8 @@ input {
 }
 
 #password-form {
-    display: block;
     margin: auto;
     text-align: center;
-
-    * {
-        display: block;
-        margin: auto;
-    }
 }
 
 @media(max-width: 1000px) {
@@ -228,5 +236,14 @@ input {
         width: 90%;
         height: 90%;
         align-items: center;
+    }
+}
+
+@media(max-width: 420px) {
+    .two-row{
+        display: block;
+    }
+    .two-row>* {
+        width: 100%;
     }
 }
