@@ -118,7 +118,7 @@ function initEncryptor(displayArea) {
                 container.querySelector('.encryptor-encrypted-text').textContent = encrypted;
                 outputBox.classList.add('show');
             } catch (error) {
-                console.err('Encryption failed: ' + error.message);
+                console.error('Encryption failed: ' + error.message);
             }
         });
     }
@@ -156,7 +156,7 @@ function initEncryptor(displayArea) {
                 container.querySelector('.encryptor-decrypted-text').textContent = decrypted;
                 outputBox.classList.add('show');
             } catch (error) {
-                console.err('Decryption failed: ' + error.message);
+                console.error('Decryption failed: ' + error.message);
             }
         });
     }
